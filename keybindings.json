@@ -1,0 +1,232 @@
+// Place your key bindings in this file to overwrite the defaults
+// https://code.visualstudio.com/docs/customization/keybindings
+[
+//---- Made by Sinisa Milivojevic
+// http:// sinisa.cyprus.com 
+
+// ABSOLUTELY requires Multi-Line extension for VS Code
+
+// This WordStar / Borland keyboard mapping requires these extensions : vscode-selection-flip && multi-command
+
+// simple navigation
+
+{ "key": "ctrl+e",                "command": "cursorUp", "when": "editorTextFocus" },
+{ "key": "shift+ctrl+e",          "command": "cursorUpSelect", "when": "editorTextFocus" },
+{ "key": "ctrl+e",                "command": "showPrevParameterHint", "when": "editorTextFocus && parameterHintsVisible" },
+{ "key": "ctrl+e",                "command": "selectPrevQuickFix", "when": "editorFocus && quickFixWidgetVisible" },
+{ "key": "ctrl+e",                "command": "selectPrevSuggestion", "when": "editorTextFocus && suggestWidgetVisible" },
+
+
+{ "key": "ctrl+s",                "command": "cursorLeft", "when": "editorTextFocus" },
+{ "key": "shift+ctrl+s",          "command": "cursorLeftSelect", "when": "editorTextFocus" },
+
+
+{ "key": "ctrl+d",                "command": "cursorRight", "when": "editorTextFocus" },
+{ "key": "shift+ctrl+d",          "command": "cursorRightSelect", "when": "editorTextFocus" },
+
+
+
+{ "key": "ctrl+x",                "command": "cursorDown", "when": "editorTextFocus" },
+{ "key": "shift+ctrl+x",          "command": "cursorDownSelect", "when": "editorTextFocus" },
+{ "key": "ctrl+x",                "command": "showNextParameterHint", "when": "editorTextFocus && parameterHintsVisible" },
+
+{ "key": "ctrl+x",                "command": "selectNextQuickFix", "when": "editorFocus && quickFixWidgetVisible" },
+{ "key": "ctrl+x",                "command": "selectNextSuggestion", "when": "editorTextFocus && suggestWidgetVisible" },
+                                     
+{"key": "ctrl+w",                 "command": "scrollLineUp", "when": "editorTextFocus" },
+
+{"key": "ctrl+z",                 "command": "scrollLineDown", "when": "editorTextFocus" },
+
+// undo 
+
+{ "key": "ctrl+u",                "command": "undo", "when": "editorTextFocus" },
+
+                                     
+// -----------------------------
+
+// Original									 
+// ---- File commands
+
+{ "key": "ctrl+k  ctrl+s",           "command": "workbench.action.files.save" },
+
+{ "key": "ctrl+k  s",           "command": "workbench.action.files.save" },
+
+{ "key": "ctrl+k ctrl+e",        "command": "workbench.action.files.openFile" },
+
+{ "key": "ctrl+k e",        "command": "workbench.action.files.openFile" },
+
+// Word and line navigation
+
+{ "key": "ctrl+f",                "command": "cursorWordRight", "when": "editorTextFocus" },
+{ "key": "ctrl+a",                "command": "cursorWordLeft", "when": "editorTextFocus" },
+{ "key": "ctrl+q ctrl+d",         "command": "cursorEnd", "when": "editorTextFocus" },
+{ "key": "ctrl+q ctrl+s",         "command": "cursorHome", "when": "editorTextFocus" },
+
+{ "key": "ctrl+q d",         "command": "cursorEnd", "when": "editorTextFocus" },
+{ "key": "ctrl+q s",         "command": "cursorHome", "when": "editorTextFocus" },
+
+{ "key": "ctrl+k ctrl+j",    "command": "workbench.action.gotoLine", "when": "editorTextFocus" },
+{ "key": "ctrl+k j",    "command": "workbench.action.gotoLine", "when": "editorTextFocus" },
+
+{ "key": "ctrl+q ctrl+i",    "command": "workbench.action.gotoLine", "when": "editorTextFocus" },
+{ "key": "ctrl+q i",    "command": "workbench.action.gotoLine", "when": "editorTextFocus" },
+
+
+//  Find, Replace and repeat  検索・置換                                     
+
+
+{ "key": "ctrl+q ctrl+f",         "command": "actions.find" },
+{ "key": "ctrl+q ctrl+a",         "command": "editor.action.startFindReplaceAction", "when": "editorFocus  && !editorReadonly" },
+
+{ "key": "ctrl+q f",         "command": "actions.find" },
+{ "key": "ctrl+q a",         "command": "editor.action.startFindReplaceAction" },
+
+{ "key": "ctrl+l",  "command": "editor.action.nextMatchFindAction", "when": "editorFocus  && !editorReadonly" }, 
+
+{ "key": "ctrl+k ctrl+q", "command": "workbench.action.closeActiveEditor", "when": "editorFocus"}, 
+
+{ "key": "ctrl+k q", "command": "workbench.action.closeActiveEditor", "when": "editorFocus"}, 
+
+
+
+//  Block operations .....  
+
+
+{ "key": "ctrl+k ctrl+k", "command":  "extension.multiCommand.execute",
+    "args": {
+       "sequence": [
+          "editor.action.selectFromAnchorToCursor", 
+          "editor.action.clipboardCopyAction"
+       ],
+       "when": "editorTextFocus && selectionAnchorSet"
+    }
+},
+
+{ "key": "ctrl+k k", "command":  "extension.multiCommand.execute",
+    "args": {
+       "sequence": [
+          "editor.action.selectFromAnchorToCursor", 
+          "editor.action.clipboardCopyAction"
+       ],
+       "when": "editorTextFocus && selectionAnchorSet" 
+    }
+},
+
+
+{ "key": "ctrl+k b", "command": "editor.action.setSelectionAnchor", "when": "editorTextFocus" },
+
+{ "key": "ctrl+k ctrl+b", "command": "editor.action.setSelectionAnchor", "when": "editorTextFocus" },
+
+
+
+{ "key": "ctrl+k ctrl+y",         "command": "editor.action.clipboardCutAction",  "when": "editorTextFocus && !editorReadonly" },
+{ "key": "ctrl+k ctrl+c",         "command": "editor.action.clipboardPasteAction",  "when": "editorTextFocus && !editorReadonly" },
+
+
+{ "key": "ctrl+k y",         "command": "editor.action.clipboardCutAction",  "when":  "editorTextFocus && !editorReadonly"   }, 
+{ "key": "ctrl+k c",         "command": "editor.action.clipboardPasteAction",  "when": "editorTextFocus && !editorReadonly" },
+                                     
+{ "key": "f4",               "command": "copyLinesDownAction", "when": "editorTextFocus && !editorReadonly" },                                     
+
+// Deleting  挿入・削除
+{ "key": "ctrl+h",                "command": "deleteLeft", "when": "editorTextFocus" },
+{ "key": "ctrl+g",                "command": "deleteRight", "when": "editorTextFocus" },
+{ "key": "ctrl+t",                "command": "deleteWordRight", "when": "textInputFocus && !editorReadOnly" },
+                                     
+// Further cursor movement operations 
+
+{ "key": "ctrl+r",              "command": "cursorPageUp", "when": "editorTextFocus" },
+{ "key": "ctrl+c",                "command": "cursorPageDown", "when": "editorTextFocus" },
+{ "key": "ctrl+q ctrl+r",             "command": "cursorTop", "when": "editorTextFocus" },
+{ "key": "ctrl+q ctrl+c",              "command": "cursorBottom", "when": "editorTextFocus" },
+{ "key": "ctrl+q ctrl+y",              "command": "deleteAllRight", "when": "editorTextFocus" },
+                                     
+{ "key": "ctrl+q r",             "command": "cursorTop", "when": "editorTextFocus" },
+{ "key": "ctrl+q c",              "command": "cursorBottom", "when": "editorTextFocus" },
+{ "key": "ctrl+q y",              "command": "deleteAllRight", "when": "editorTextFocus" },                                     
+
+{ "key": "ctrl+y",          "command": "editor.action.deleteLines", "when": "editorTextFocus" },
+{ "key": "ctrl+n",      "command": "editor.action.insertLineBefore", "when": "editorTextFocus" },
+{ "key": "ctrl+m",      "command": "lineBreakInsert", "when": "editorTextFocus" },
+
+{ "key": "ctrl+i",                   "command": "tab", "when": "editorTextFocus" },
+{ "key": "ctrl+shift+i",             "command": "outdent", "when": "editorTextFocus"},
+
+
+// The next set of  keybindings require extensions "Numbered Bookmarks" 
+
+{ "key": "ctrl+k 1",          "command": "numberedBookmarks.toggleBookmark1", "when": "editorTextFocus" },
+{ "key": "ctrl+k 2",          "command": "numberedBookmarks.toggleBookmark2", "when": "editorTextFocus" },
+{ "key": "ctrl+k 3",          "command": "numberedBookmarks.toggleBookmark3", "when": "editorTextFocus" },
+{ "key": "ctrl+k 4",          "command": "numberedBookmarks.toggleBookmark4", "when": "editorTextFocus" },
+{ "key": "ctrl+k 5",          "command": "numberedBookmarks.toggleBookmark5", "when": "editorTextFocus" },
+{ "key": "ctrl+k 6",          "command": "numberedBookmarks.toggleBookmark6", "when": "editorTextFocus" },
+{ "key": "ctrl+k 7",          "command": "numberedBookmarks.toggleBookmark7", "when": "editorTextFocus" },
+{ "key": "ctrl+k 8",          "command": "numberedBookmarks.toggleBookmark8", "when": "editorTextFocus" },
+{ "key": "ctrl+k 9",          "command": "numberedBookmarks.toggleBookmark9", "when": "editorTextFocus" },
+
+{ "key": "ctrl+q 1",          "command": "numberedBookmarks.jumpToBookmark1", "when": "editorTextFocus" },
+{ "key": "ctrl+q 2",          "command": "numberedBookmarks.jumpToBookmark2", "when": "editorTextFocus" },
+{ "key": "ctrl+q 3",          "command": "numberedBookmarks.jumpToBookmark3", "when": "editorTextFocus" },
+{ "key": "ctrl+q 4",          "command": "numberedBookmarks.jumpToBookmark4", "when": "editorTextFocus" },
+{ "key": "ctrl+q 5",          "command": "numberedBookmarks.jumpToBookmark5", "when": "editorTextFocus" },
+{ "key": "ctrl+q 6",          "command": "numberedBookmarks.jumpToBookmark6", "when": "editorTextFocus" },
+{ "key": "ctrl+q 7",          "command": "numberedBookmarks.jumpToBookmark7", "when": "editorTextFocus" },
+{ "key": "ctrl+q 8",          "command": "numberedBookmarks.jumpToBookmark8", "when": "editorTextFocus" },
+{ "key": "ctrl+q 9",          "command": "numberedBookmarks.jumpToBookmark9", "when": "editorTextFocus" },
+
+
+{ "key": "ctrl+o c",           "command": "numberedBookmarks.clear", "when": "editorTextFocus" },
+
+{ "key": "ctrl+o ctrl+c",           "command": "numberedBookmarks.clear", "when": "editorTextFocus" },
+
+{ "key": "ctrl+o y",      "command": "numberedBookmarks.clearFromAllFiles", "when": "editorTextFocus" },
+
+{ "key": "ctrl+o ctrl+y",      "command": "numberedBookmarks.clearFromAllFiles", "when": "editorTextFocus" },
+{
+   "key": "ctrl+q ctrl+p",   
+   "command": "moveActiveEditor",
+   "args": {
+       "to": "left",
+       "by": "tab",
+       "value": 1
+   }
+},
+{
+   "key": "ctrl+q ctrl+n",
+   "command": "moveActiveEditor",
+   "args": {
+       "to": "right",
+       "by": "tab",
+       "value": 1
+   }
+},
+{
+   "key": "ctrl+q p",   
+   "command": "moveActiveEditor",
+   "args": {
+       "to": "left",
+       "by": "tab",
+       "value": 1
+   }
+},
+{
+   "key": "ctrl+q n",
+   "command": "moveActiveEditor",
+   "args": {
+       "to": "right",
+       "by": "tab",
+       "value": 1
+   }
+}
+]
+
+
+
+
+
+
+
+
+
+
