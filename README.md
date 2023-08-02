@@ -43,7 +43,7 @@ I hope you know how to install keybindings.json in your local (HOME) directory. 
 
 https://stackoverflow.com/questions/33791097/how-can-i-change-keyboard-shortcut-bindings-in-visual-studio-code
 
-Next, navigation among the panes (tabs) ...... This is done already, but it is not working as it should ..... Any ideas are welcome !!!
+Next, navigation among the panes (tabs) ...... This is done already, but I would like to replace the current set of bindings that do Ctrl+Tab after which you Tab, Tab, Tab .... with Single Ctrl+q-p or Ctrl+q-n combo ....
 
 
 ### Where to report a problem ???
@@ -62,11 +62,11 @@ In order for all of this to work, you need __"MultiCommand Extension"__  and __"
 
 ## TODO
 
-* "Duplicate a current line" command ...... I like it on F4, but I might come up with some Ctrl+Q-... combo .. It is not working yet !!
-
 * Move the block ..... I plan to start  working on it ....
 
 * Navigation throughout most of VS Code menus, windows, separate parts of the window by Ctrl+... sequences .... this will not be that easy nor that soon ......
+
+* Copy block to / from register No ........ 1..9 .
 
 *  MUCH simpler Makefile-mode ..... No, I do not want to mess with CMake ....
 
@@ -125,8 +125,8 @@ Control key combinations are denoted by Ctrl+. So Ctrl+W-E, means you first hold
 |Ctrl+K-S    | Save Current File    | Any       | Basic stuff              |
 |Ctrl+K-E    | Open new File    | Any       |     Basic stuff          |
 |Ctrl+K-Q    | Leave VS Code    | Any       |     Basic stuff          |
-|Ctrl+Q-P    | Move to the left tab    | Any       |    Moves tab, but not file .... Advice required       |
-|Ctrl+Q-N    | Move to the right tab    | Any       |   Moves tab, but not file .... Advice required            |
+|Ctrl+Q-P    | Move to the left tab    | Any       |    Moves tab, but not file .... Use Ctrl+Tab for moving to the next tab      |
+|Ctrl+Q-N    | Move to the right tab    | Any       |   Moves tab, but not file .... Use Shift+Ctrl+Tab for moving to the previous tab      |
 
 
 ### Editing keys
@@ -149,7 +149,8 @@ Control key combinations are denoted by Ctrl+. So Ctrl+W-E, means you first hold
 |Ctrl+M      | Break Current Line            | Editor    | Basic stuff               |
 |Ctrl+I      | Insert Tab            | Editor    | Basic stuff               |
 |Shift+Ctrl+I      |  UnTab            | Editor    | Basic stuff               |
-|  F4      | Duplicate Current Line            | Editor    | Still on TODO list ... Recommend some CTRL sequence instead |
+|F4       | Duplicate Current Line            | Editor    | It should work .... |
+|Ctrl+K-D | Duplicate Current Line            | Editor    | It should work ...  |
 
 ### Block Command keys
 

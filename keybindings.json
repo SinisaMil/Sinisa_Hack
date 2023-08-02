@@ -126,7 +126,9 @@
 { "key": "ctrl+k y",         "command": "editor.action.clipboardCutAction",  "when":  "editorTextFocus && !editorReadonly"   }, 
 { "key": "ctrl+k c",         "command": "editor.action.clipboardPasteAction",  "when": "editorTextFocus && !editorReadonly" },
                                      
-{ "key": "f4",               "command": "copyLinesDownAction", "when": "editorTextFocus && !editorReadonly" },                                     
+{ "key": "F4",               "command": "copyLinesDownAction", "when": "editorTextFocus && !editorReadonly" },                                     
+{ "key": "ctrl+k d",         "command": "copyLinesDownAction", "when": "editorTextFocus && !editorReadonly" },
+{ "key":  "ctrl+k ctrl+d",   "command": "copyLinesDownAction", "when": "editorTextFocus && !editorReadonly" },
 
 // Deleting  挿入・削除
 { "key": "ctrl+h",                "command": "deleteLeft", "when": "editorTextFocus" },
